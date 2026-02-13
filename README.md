@@ -29,3 +29,7 @@
     ln -s .ai-boilerplate/.claude/settings.json .claude/settings.json
     ln -s ../.ai-boilerplate/.claude/commands .claude/commands
     ````
+
+# Usage
+- Start claude (`claude` if you use an outdated code editor)
+- Invoke the commands: `/create-spec`, `/plan-architecture` and then `/write-code`.
