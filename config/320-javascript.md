@@ -2,7 +2,10 @@
 
 ## General
 - Prefer functional style (e.g. .map) over loops.
-- Constants use camelCase, not SCREAMING_SNAKE_CASE (e.g. #myConst = 17)
+
+## Naming
+- Constants use camelCase, not SCREAMING_SNAKE_CASE (e.g. #myConst = 17).
+- Event names use camelCase, not kebab-case.
 
 ## Logs
 - If there is a logger alreay in use, use it.
