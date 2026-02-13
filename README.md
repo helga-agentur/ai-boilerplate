@@ -14,7 +14,7 @@
     @import .ai-boilerplate/config/330-web-components.md
     @import .ai-boilerplate/config/340-twig.md
     @import .ai-boilerplate/config/350-bem.md
-    @import .ai-boilerplate/config/400-documentation.md
+    @import .ai-boilerplate/config/420-documentation.md
     @import .ai-boilerplate/config/430-logs-errors.md
     @import .ai-boilerplate/config/440-i18n.md
     @import .ai-boilerplate/config/450-accessibility.md
