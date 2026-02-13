@@ -27,4 +27,5 @@
     ln -s .ai-boilerplate/.claudeignore .claudeignore
     mkdir -p .claude
     ln -s .ai-boilerplate/.claude/settings.json .claude/settings.json
+    ln -s ../.ai-boilerplate/.claude/commands .claude/commands
     ````
