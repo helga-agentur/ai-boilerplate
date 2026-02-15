@@ -18,3 +18,6 @@
 - Among all valid solutions, choose the simplest one.
 - Keep business logic in plain, simple, pure functions (for easy testability) or classes.
 - Prefer dependency injection over imports (again: for easier testability).
+
+## Naming
+- Always use full words ("event" instead of "ev"; "error" instead of "e" etc.)
