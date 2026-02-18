@@ -8,7 +8,7 @@ This file contains the common rules that we use at Helga to specify patterns and
 # Style
 - The language of your output is German (Swiss Orthography, so "ss" instead of "ß").
 - Keep it short, clean and very precise.
-- Don't repeat yourself; aim for one single source of truth.
+- Don't repeat yourself; aim for one single source of truth. That is crucial: Define everything only once in a document; then reference it from all other places.
 - Resolve contradictions; if unsure, ask for clarification.
 - Suppress everything obvious; people working on it are smart and competent.
 - Don't go into implementation details; you describe what has to be done and why, but not how.
