@@ -33,3 +33,16 @@
 # Usage
 - Start claude (`claude` if you use an outdated code editor)
 - Invoke the commands: `/create-spec`, `/plan-architecture` and then `/write-code`.
+
+# A chapter is for Röbi
+Just once (Setup):
+1. Open the terminal (that blackish thing with the monospaced font)
+1. Switch to some smartish folder (type `cd `, then drag'n'drop it from the Finder and hit [Enter])
+1. Copy & paste `git@github.com:helga-agentur/ai-boilerplate.git`, press [Enter] again.
+1. Type `cd ai-boilerplate` and hit [Enter] one more time.
+1. Start Claude Code: `claude` – and, yes, [Enter]
+1. Type your commands, e.g. `/write-pattern-spec <figma-link>`. Yes. [Enter]. Indeed.
+
+Whenever things change
+- Repeat steps 1 and 2 from above.
+- Type `git pull` – then … [Enter].
