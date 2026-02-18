@@ -1,31 +1,11 @@
 ---
 description: Create a Pattern Specification
-argument-hint: <figma-link>
+argument-hint: <figma-link> <additional-hints>
 ---
 # Role
-- You are an expert requirements engineer and business analyst.
 - Your task is to generate a specification for a pattern (Drupal Paragraph, website module, block …) that is understood by developers, AI devs and especially our customer (usually marketing and communication people).
 
-# Style
-- The language of your output is German (Swiss Orthography, so "ss" instead of "ß").
-- Keep it short, clean and very precise.
-- Don't repeat yourself; aim for one single source of truth.
-- Resolve contradictions; if unsure, ask for clarification.
-- Suppress everything obvious; people working on it are smart and competent.
-- Don't go into implementation details; you describe what has to be done and why, but not how.
-- For every pattern, use a middle ground between a strict structure (which improves consistency on the website) and flexibility (which enables editors to cover unexpected topics/cases).
-
-# Data Types
-- A field is always defined as: "German [English]*MS (Type; Additional Description)":
-  - German is the field's German name; use self-descriptive, explanatory, short names.
-  - English is the field's English name; only use if different from German.
-  - * is a required field.
-  - M is a multilingual field.
-  - S is a searchable field.
-  - Type is the field's data type (e.g. Text, Positive Number, Future Date, Enum/Selection or Relation to another field; be very specific; if it's a relation, define the relation type, e.g. "Verknüpfung mit 1–n Kategorien, s. unten", "Verknüpfung mit 0–2 Personen, s. unten"; make sure that the related fields are clearly defined below).
-  - Additional Description provides more context or details about the field if needed.
-
-# Example
+# Examples
 
 This is an example for a slider that has different categories as tabs, and every category contains a slider. First, we focus on the data structure / fields, then the functions that are non-obvious.
 
@@ -83,34 +63,8 @@ Jedes Angebot besteht aus:
 - Hinweis beim Erfassen: «Empfohlene Länge des Texts: 200–250 Zeichen (inkl. Leerzeichen).»
 *End of Example*
 
-# Content
-- If the pattern contains a **text field**,
-  - check what types of text / editors are available; usually, they are defined within the Figma file (Minimal Editor, Minimal Editor with Lists, Full Fledged Editor, Text, Multi Line Text)
-  - use them as the type; if there is no appropriate editor, ask what to do (create a new one of use an existing one; explain the differences)
-- If a pattern contains a **video**,
-  - check what types of videos are available (auto-play or not); they're usually defined within the Figma file. 
-  - use them as the type; if definitions are missing, ask what to do (create a new one of use an existing one)
-- If a pattern contains an **image**,
-  - check its aspect ratio and define what ratios are available (this may include the original aspect ratio)
-- Use multilingual fields for images if they may contain text and for videos if they may contain voice or text.
-- Don't describe what can be seen from the Figma design (e.g. order of items or alignment); only describe what is non-visual.
-- Make sure that you cover the functionality of all breakpoints of the design. If fields, interactions or logic differs between breakpoints, describe the functionality behind it.
-- A migration chapter is only needed when field types of an existing pattern change.
-
-# Templates
-- Buttons and links usually have the following fields (if not defined otherwise in the mockup); define once per pattern (inline if only one exists; if more than one exists, create a new chapter):
-  - Text*MS (Text; im Mockup «<Lorem ipsum>»)
-  - URL*M (URL)
-  - Öffnen in neuem Tab [Open in New Tab] (Checkbox)
-- If a link or button is optional, use the following form:
-  - "Button; falls gesetzt, bestehend aus:" (and then the fields)
-- For phone numbers, use two fields:
-  - Link*S (Text; im Link-Format erfasst, z.B. «tel:+41315281025»)
-  - Angezeigte Nummer*S (Text; für Menschen lesbar erfasst, z.B. «031 528 10 25»)
-- If type is an enum, use "(Auswahl: «zentriert» [centered], «oben» [top] oder «unten»» [bottom])".
-
 # Structure
-Usually, a specification has the following structure:
+Usually, a pattern specification has the following structure:
 - Name is an H1, sub-chapters are H2. No deeper nesting.
 - Main fields that are available to editors ("Felder")
 - Sub-entries / relations with their fields, every one has its own chapter with the relation's name, then "Jede <relation> besteht aus:"
@@ -121,7 +75,12 @@ Usually, a specification has the following structure:
 - Reference the content of the mockup to clearly define the fields (add it as the type's description): e.g. "(text; in the mockup «Lorem ipsum»)".
 
 # Tasks
-1. Fetch the Figma link through MCP; if you don't have access, let the user know how to install/configure MCP.
+0. **Basics**
+   - Read ../spec-basics.md; it contains the building blocks for writing a specification in the style we require.
+   - If you can't see the file, *end* here.
+   - spec-basics.md defines shared conventions; treat its rules as defaults; instructions in this file take precedence where they differ.
+1. **Input** 
+   - Fetch the Figma link through the Figma MCP; if you don't have access, let the user know how to install/configure MCP.
 2. **Requirements Analysis**
    - Look at the layout.
    - Deduct how the pattern is supposed to work, what fields are available and what editors must know in order to use them coherently.
