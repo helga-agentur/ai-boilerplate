@@ -40,6 +40,7 @@ This file contains the common rules that we use at Helga to specify patterns and
 - Don't describe what can be seen from the design file (e.g. order of items or alignment); only describe what is non-visual.
 - Make sure that you cover the functionality of all breakpoints of the design. If fields, interactions or logic differs between breakpoints, describe the functionality behind it.
 - Define a migration strategy if field types of an existing pattern or data structure change.
+- Never go into technical or implementation details. This is all about functionality for a non-technical audience.
 
 # Templates
 - Buttons and links usually have the following fields (if not defined otherwise); if define once per pattern/feature (inline if only one exists; if more than one exists, create a specific chapter):
