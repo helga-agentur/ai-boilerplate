@@ -34,7 +34,7 @@
 - Start claude (`claude` if you use an outdated code editor)
 - Invoke the commands: `/create-spec`, `/plan-architecture` and then `/write-code`.
 
-# A chapter is for Röbi
+# Röbi's Chapter
 Just once (Setup):
 1. Open the terminal (that blackish thing with the monospaced font)
 1. Switch to some smartish folder (type `cd `, then drag'n'drop it from the Finder and hit [Enter])
