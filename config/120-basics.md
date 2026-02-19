@@ -5,3 +5,4 @@
 - If you change behavior, add/adjust tests.
 - Prefer incremental improvements over large rewrites.
 - Never commit secrets. Never log secrets.
+- Before you commit/stage anything, *ALWAYS* let me review it; pause while I'm doing so.
