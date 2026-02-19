@@ -1,10 +1,13 @@
 # Setup
 
-1. Add this git repo as a submodule to your project:
-`git submodule add git@github.com:helga-agentur/ai-boilerplate.git .ai-boilerplate`
-2. Create a local `CLAUDE.md` in your project root
-3. Add your imports to `CLAUDE.md`:
-    ````
+Add this repo as a submodule to your project and link the required config files.
+
+1. In your project root, add the submodule:
+   ```
+   git submodule add git@github.com:helga-agentur/ai-boilerplate.git .ai-boilerplate
+   ```
+2. Create a `CLAUDE.md` file in your project root. This is the config file Claude Code reads on startup. Add the imports you need:
+    ```
     @import .ai-boilerplate/config/120-basics.md
     @import .ai-boilerplate/config/130-architecture.md
     @import .ai-boilerplate/config/150-playbook.md
@@ -20,30 +23,54 @@
     @import .ai-boilerplate/config/450-accessibility.md
     @import .ai-boilerplate/config/500-git-workflow.md
     @import .ai-boilerplate/config/600-security.md
-    @import .ai-boilerplate/config/700-coding-standards.md    
-    ````
-4. Link the relevant settings:
-    ````
+    @import .ai-boilerplate/config/700-coding-standards.md
+    ```
+   Only include what's relevant for your project (e.g. leave out `310-drupal.md` for non-Drupal projects).
+3. Create symlinks so Claude Code picks up the shared settings and commands:
+    ```
     ln -s .ai-boilerplate/.claudeignore .claudeignore
     mkdir -p .claude
     ln -s .ai-boilerplate/.claude/settings.json .claude/settings.json
     ln -s ../.ai-boilerplate/.claude/commands .claude/commands
-    ````
+    ```
+   Symlinks mean these files stay in sync automatically whenever the submodule is updated — no manual copying needed.
+
+# Updating
+
+When the boilerplate changes, pull the latest version:
+```
+cd .ai-boilerplate && git pull && cd ..
+```
 
 # Usage
-- Start claude (`claude` if you use an outdated code editor)
-- Invoke the commands: `/create-spec`, `/plan-architecture` and then `/write-code`.
+
+Start Claude Code from your project root:
+```
+claude
+```
+
+Then invoke the commands in order:
+1. `/write-spec` — define what to build
+2. `/plan-architecture` — plan how to build it
+3. `/write-code` — implement it
 
 # Röbi's Chapter
-Just once (Setup):
-1. Open the terminal (that blackish thing with the monospaced font)
-1. [Install Claude Code](https://code.claude.com/docs/en/setup).
-1. Switch to some smartish folder (type `cd `, then drag'n'drop it from the Finder and hit [Enter])
-1. Copy & paste `git@github.com:helga-agentur/ai-boilerplate.git`, press [Enter] again.
-1. Type `cd ai-boilerplate` and hit [Enter] one more time.
-1. Start Claude Code: `claude` – and, yes, [Enter]
-1. Type your commands, e.g. `/write-pattern-spec <figma-link>`. Yes. [Enter]. Indeed.
 
-Whenever things change
-- Repeat steps 1 and 2 from above.
-- Type `git pull` – then … [Enter].
+**First time only:**
+
+1. Open the terminal (the black window with the monospaced font — search for «Terminal» in Spotlight).
+2. [Install Claude Code](https://code.claude.com/docs/en/setup).
+3. Navigate to your project folder: type `cd `, then drag the folder from Finder into the terminal window, then press Enter.
+4. Clone the boilerplate:
+   ```
+   git clone git@github.com:helga-agentur/ai-boilerplate.git
+   ```
+   Then press Enter.
+5. Go into the folder: type `cd ai-boilerplate` and press Enter.
+6. Start Claude Code: type `claude` and press Enter.
+7. Type a command, e.g. `/write-pattern-spec <figma-link>`, and press Enter.
+
+**When the boilerplate has been updated:**
+
+1. Open the terminal and navigate to the `ai-boilerplate` folder (steps 1 and 3 above).
+2. Type `git pull` and press Enter.
