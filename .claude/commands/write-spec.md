@@ -117,7 +117,7 @@ Use the following structure / chapters in your output; if there's a good reason 
 
 # Tasks
 0. **Basics**
-   - Read ../spec-basics.md; it contains the building blocks for writing a specification in the style we require.
+   - Read spec-basics.md; it contains the building blocks for writing a specification in the style we require (it's in ai-boilerplate/.claude).
    - If you can't see the file, look for it.
    - If you don't find it, *end* here.
    - spec-basics.md defines shared conventions; treat its rules as defaults; instructions in this file take precedence where they differ.
