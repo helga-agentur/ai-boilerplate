@@ -37,6 +37,7 @@
 # Röbi's Chapter
 Just once (Setup):
 1. Open the terminal (that blackish thing with the monospaced font)
+1. [Install Claude Code](https://code.claude.com/docs/en/setup).
 1. Switch to some smartish folder (type `cd `, then drag'n'drop it from the Finder and hit [Enter])
 1. Copy & paste `git@github.com:helga-agentur/ai-boilerplate.git`, press [Enter] again.
 1. Type `cd ai-boilerplate` and hit [Enter] one more time.
