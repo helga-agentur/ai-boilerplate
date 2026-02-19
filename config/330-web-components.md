@@ -10,6 +10,7 @@
 - Prefer explicit public APIs for web components:
   - Attributes / properties in
   - Custom events out
+- When using attributes, validate all of them.
 
 ### Collaboration
 - If state is shared across multiple components, 
@@ -23,3 +24,5 @@
 
 ## Libraries
 - When logic exists in https://github.com/helga-agentur/ui-components, use it.
+  - To read boolean attributes, use native `hasAttribute()` instead of ui-component's
+    `readAttribute()`.
