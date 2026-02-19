@@ -118,7 +118,8 @@ Use the following structure / chapters in your output; if there's a good reason 
 # Tasks
 0. **Basics**
    - Read ../spec-basics.md; it contains the building blocks for writing a specification in the style we require.
-   - If you can't see the file, *end* here.
+   - If you can't see the file, look for it.
+   - If you don't find it, *end* here.
    - spec-basics.md defines shared conventions; treat its rules as defaults; instructions in this file take precedence where they differ.
 1. **Input** 
    - Read the input provided and check all links that it contains.
