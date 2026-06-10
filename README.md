@@ -1,3 +1,5 @@
+This repo is deprecated. Use [helga-ai](https://github.com/helga-agentur/helga-ai) instead.
+
 # Setup
 
 Add this repo as a submodule to your project and link the required config files.
